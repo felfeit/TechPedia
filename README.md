@@ -3,6 +3,7 @@ TechPedia adalah aplikasi Android yang membantu kamu menemukan informasi gadget 
 
 ## 🖼️ Tampilan Aplikasi
 
+![Cover](https://github.com/user-attachments/assets/8b30f856-d4db-47f2-9890-fe512f27ed55)
 
 ## ✨ Fitur Utama
 - 📃 **Lihat daftar gadget terbaru**: Update informasi gadget langsung dari API, lengkap dengan foto dan spesifikasi singkat.
