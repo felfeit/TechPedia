@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginVertical="@dimen/_8sdp"
+    app:contentPadding="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_gadget_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_64sdp"
+            android:contentDescription="@string/gadget_image_description"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_gadget_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            app:fontFamily="@font/rhd_semi_bold"
+            app:layout_constraintEnd_toStartOf="@id/icon_chevron_right"
+            app:layout_constraintStart_toEndOf="@id/iv_gadget_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fairphone 6" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_brand_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/grey"
+            android:visibility="gone"
+            app:fontFamily="@font/rhd_medium"
+            app:layout_constraintEnd_toStartOf="@id/icon_chevron_right"
+            app:layout_constraintStart_toEndOf="@id/iv_gadget_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_gadget_name"
+            tools:text="Fairphone" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_release_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="@color/grey"
+            android:visibility="gone"
+            app:fontFamily="@font/rhd_semi_bold"
+            app:layout_constraintEnd_toStartOf="@id/icon_chevron_right"
+            app:layout_constraintStart_toEndOf="@id/iv_gadget_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_gadget_name"
+            tools:text="Released 2025, June 16" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_os_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="@color/grey"
+            android:visibility="gone"
+            app:fontFamily="@font/rhd_semi_bold"
+            app:layout_constraintEnd_toStartOf="@id/icon_chevron_right"
+            app:layout_constraintStart_toEndOf="@id/iv_gadget_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_release_info"
+            tools:text="Android 15" />
+
+
+        <ImageView
+            android:id="@+id/icon_chevron_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/chevron_icon_description"
+            android:padding="8dp"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/nav_unselected" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

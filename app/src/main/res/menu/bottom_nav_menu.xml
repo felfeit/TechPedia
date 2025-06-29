@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_browse"
+        android:title="Browse"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_grid_search_fill"/>
+
+    <item
+        android:id="@+id/navigation_latest"
+        android:title="Latest"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_latest_fill"/>
+
+    <item
+        android:id="@+id/navigation_saved"
+        android:title="Saved"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_bookmark_fill"/>
+</menu>

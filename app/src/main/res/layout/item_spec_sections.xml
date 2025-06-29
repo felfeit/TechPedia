@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    android:layout_marginVertical="@dimen/_6sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_12sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header: icon dan title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_section_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:contentDescription="Section Icon"
+                tools:src="@drawable/ic_signal"
+                app:tint="@color/primary" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_section_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Network"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_8sdp" />
+        </LinearLayout>
+
+
+        <!-- Nested RecyclerView for key-value specs -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_specs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

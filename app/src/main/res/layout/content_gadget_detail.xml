@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_images"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:clipToPadding="false"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/indicator"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:dotsClickable="true"
+        app:dotsColor="@color/primary"
+        app:dotsSize="@dimen/_10sdp"
+        app:dotsSpacing="4dp"
+        app:layout_constraintBottom_toTopOf="@id/basicInfoContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_pager_images" />
+
+
+    <LinearLayout
+        android:id="@+id/basicInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicator">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="@dimen/_6sdp"
+            app:chipSpacingVertical="@dimen/_6sdp"
+            app:singleLine="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRelease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:clickable="false"
+                android:fontFamily="@font/rhd_semi_bold"
+                android:textColor="@color/on_blue_container"
+                app:chipBackgroundColor="@color/blue_container"
+                app:chipCornerRadius="@dimen/_30sdp"
+                app:chipStrokeColor="@color/transparent"
+                tools:text="Released 2025, June 16" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:clickable="false"
+                android:fontFamily="@font/rhd_semi_bold"
+                android:textColor="@color/on_green_container"
+                app:chipBackgroundColor="@color/green_container"
+                app:chipCornerRadius="@dimen/_20sdp"
+                app:chipStrokeColor="@color/transparent"
+                tools:text="Android 15/15, XOS 15.1" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDimension"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:clickable="false"
+                android:fontFamily="@font/rhd_semi_bold"
+                android:textColor="@color/on_orange_container"
+                app:chipBackgroundColor="@color/orange_container"
+                app:chipCornerRadius="@dimen/_20sdp"
+                app:chipStrokeColor="@color/transparent"
+                tools:text="198g, 8mm thickness" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:clickable="false"
+                android:fontFamily="@font/rhd_semi_bold"
+                android:textColor="@color/on_purple_container"
+                app:chipBackgroundColor="@color/purple_container"
+                app:chipCornerRadius="@dimen/_20sdp"
+                app:chipStrokeColor="@color/transparent"
+                tools:text="128GB storage, microSDXC" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Add to Saved"
+            android:textStyle="bold"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="@dimen/_8sdp"
+            app:icon="@drawable/ic_bookmark"
+            app:iconGravity="textStart"
+            app:iconPadding="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

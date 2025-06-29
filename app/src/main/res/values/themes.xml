@@ -1,0 +1,11 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TechPedia" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:fontFamily">@font/red_hat_display</item>
+        <item name="fontFamily">@font/red_hat_display</item>
+    </style>
+
+    <style name="Theme.TechPedia" parent="Base.Theme.TechPedia" />
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_browse">
+
+    <fragment
+        android:id="@+id/navigation_browse"
+        android:name="com.felfeit.techpedia.presentation.pages.browse.BrowseBrandFragment"
+        android:label="Browse Brands"
+        tools:layout="@layout/fragment_browse_brands">
+
+        <action
+            android:id="@+id/action_browse_to_brand_phones"
+            app:destination="@id/navigation_brand_phones"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_browse"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_latest"
+        android:name="com.felfeit.techpedia.presentation.pages.latest.LatestGadgetsFragment"
+        android:label="Latest Gadgets"
+        tools:layout="@layout/fragment_latest_gadgets">
+
+        <action
+            android:id="@+id/action_latest_to_phone_detail"
+            app:destination="@id/navigation_phone_detail"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_latest"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_saved"
+        android:name="com.felfeit.techpedia.presentation.pages.saved.SavedGadgetsFragment"
+        android:label="Saved Gadgets"
+        tools:layout="@layout/fragment_saved_gadgets">
+
+        <action
+            android:id="@+id/action_saved_to_phone_detail"
+            app:destination="@id/navigation_phone_detail"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_saved"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_brand_phones"
+        android:name="com.felfeit.techpedia.presentation.pages.gadgets.BrandGadgetsFragment"
+        android:label="Brand Gadgets"
+        tools:layout="@layout/fragment_brand_gadgets">
+
+        <action
+            android:id="@+id/action_brand_phones_to_phone_detail"
+            app:destination="@id/navigation_phone_detail"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_brand_phones"
+            app:popUpToInclusive="false" />
+
+        <argument
+            android:name="brand"
+            app:argType="com.felfeit.techpedia.domain.models.Brand" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_phone_detail"
+        android:name="com.felfeit.techpedia.presentation.pages.detail.PhoneDetailFragment"
+        android:label="Gadget Specs Detail"
+        tools:layout="@layout/fragment_gadget_detail">
+
+        <argument
+            android:name="phoneSpecs"
+            app:argType="com.felfeit.techpedia.domain.models.Gadget" />
+
+    </fragment>
+</navigation>

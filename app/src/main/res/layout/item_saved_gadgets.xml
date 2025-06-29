@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginVertical="@dimen/_8sdp"
+    app:contentPadding="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_gadget_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_64sdp"
+            android:contentDescription="@string/gadget_image_description"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_phone_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            app:fontFamily="@font/rhd_semi_bold"
+            app:layout_constraintEnd_toStartOf="@id/icon_remove_bookmark"
+            app:layout_constraintStart_toEndOf="@id/iv_gadget_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fairphone 6" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_release_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="@color/grey"
+            app:fontFamily="@font/rhd_semi_bold"
+            app:layout_constraintEnd_toStartOf="@id/icon_remove_bookmark"
+            app:layout_constraintStart_toEndOf="@id/iv_gadget_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone_name"
+            tools:text="Released 2025, June 16" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_os_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="@color/grey"
+            app:fontFamily="@font/rhd_semi_bold"
+            app:layout_constraintEnd_toStartOf="@id/icon_remove_bookmark"
+            app:layout_constraintStart_toEndOf="@id/iv_gadget_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_release_info"
+            tools:text="Android 15" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/icon_remove_bookmark"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            app:rippleColor="?colorErrorContainer"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
+            app:icon="@drawable/ic_bookmark_remove"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:iconTint="?colorError"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

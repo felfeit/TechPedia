@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TechPedia</string>
+    <string name="gadget_image_description">Gadget Image</string>
+    <string name="text_empty">No Gadgets Saved</string>
+    <string name="chevron_icon_description">Chevron Icon</string>
+    <string name="save_gadget_text">Save Gadget</string>
+    <string name="saved_text">Saved</string>
+</resources>
