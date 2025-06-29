@@ -2,7 +2,7 @@ package com.felfeit.techpedia.di;
 
 import com.felfeit.techpedia.data.datasource.local.TechPediaLocalDataSource;
 import com.felfeit.techpedia.data.datasource.remote.TechPediaRemoteDataSource;
-import com.felfeit.techpedia.data.datasource.repository.TechPediaRepository;
+import com.felfeit.techpedia.data.repository.TechPediaRepository;
 import com.felfeit.techpedia.domain.repository.ITechPediaRepository;
 
 import javax.inject.Singleton;

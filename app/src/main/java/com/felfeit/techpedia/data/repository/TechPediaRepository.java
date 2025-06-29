@@ -1,4 +1,4 @@
-package com.felfeit.techpedia.data.datasource.repository;
+package com.felfeit.techpedia.data.repository;
 
 import com.felfeit.techpedia.data.NetworkBoundResource;
 import com.felfeit.techpedia.data.Resource;
